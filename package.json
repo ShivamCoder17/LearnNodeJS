@@ -1,0 +1,19 @@
+{
+  "name": "1_introduction",
+  "version": "1.0.0",
+  "description": "1st Node Project of 1st week class",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "shivam": "nodemon server.js"
+  },
+  "author": "TheSG",
+  "license": "ISC",
+  "dependencies": {
+    "cli-color": "^2.0.4",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
