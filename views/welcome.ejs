@@ -1,0 +1,22 @@
+<%- include('./layouts/header')%>
+    <div class="container">
+        <h1>Hello, world!</h1>
+        <h2><%=stu%></h2>
+    </div>
+
+    <ol>
+        <% stu.map(data => { %>
+            <li><%=data%></li>
+        <%})%>
+    </ol>
+
+    <% if(user.gender === "male") { %>
+        Mr. <%=  user.name %>
+        <% } else { %>
+        Mrs. <%=  user.name %>
+    <% } %>
+<img src="/images/v1.jpg" alt="v1">
+
+
+<%- include('./layouts/footer')%>
+
