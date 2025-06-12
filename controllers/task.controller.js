@@ -1,6 +1,6 @@
-class TaskController {
+const EmpModel = require('../models/emp.model')
 
-    
+class TaskController {
 
     async home(req, res) {
         try {
@@ -151,6 +151,24 @@ class TaskController {
     async contactUs(req, res) {
         try {
             res.render('contact-us');
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async getForm(req,res){
+        try {
+            res.render('form');
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async submitForm(req,res){
+        try {
+            const saveData = await EmpModel.create(req.body);
+            console.log(saveData,"SD");
+            res.redirect("/form");
         } catch (error) {
             throw error;
         }
